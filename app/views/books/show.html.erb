@@ -59,8 +59,8 @@
 							<td>
 
 							<td>
-								<% if book_comment.user == current_user %>
-									<%= link_to "delete", book_book_comments_path(@book), method: :delete %>
+								<% if book_comment.user_id == current_user.id %>
+									<%= link_to "delete", book_book_comments_path(@book, comment_id: book_comment.id), method: :delete %>
 								<% end %>
 							</td>
 						</tr>
